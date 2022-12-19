@@ -1,19 +1,19 @@
 addEventListener(`DOMContentLoaded`, (e)=>{
 
-   //WHILE
-    // es un bucle que se ejcuta una sentencia mientras la condicion sea verdadera
+   //DO..WHILE
+    // es un bucle donde se ejecuta una sentencia especifica hasta que la condicion que se comprueba sea falsa
 
-    while (condicion)
-    sentencia
+    do
+        sentencia
+    while (condición);
 
-    //condicion que se evalua antes de cada paso del bucle si esta se ejecuta verdadera pasa ala s siguiente
-    //sentencia se ejecuta mientras la condicion se evalua como verdadera
+    //una sentencia que se ejecuta al menos una ves y es reejcuatada cadavez que la condicion sea verdadera
+    //condicion se evalua despues de cada paso por el bucle si la condicion es verdadera se reejecuta 
 
-    n = 0;
-    x = 0;
-    while (n < 3) {
-      n ++;   //al ser verdadera se ejcuta esto
-      x += n;
-    }
+    //ejemplos 
+    do {
+        i += 1;
+        document.write(i);
+     } while (i < 5);
 
 })
