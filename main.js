@@ -1,59 +1,19 @@
 addEventListener(`DOMContentLoaded`, (e)=>{
 
-   //FOR...OF
-    // ejecuta un bloque de codigo para cada elemento de un objeto iterable
- 
-    for (variable of iterable) {
-        statement
-      }
-    //variable corresponde al valor asignado
-    //iterable objeto cuyas propiedades enumerables son repetidas
-    //ejemplos
+   //WHILE
+    // es un bucle que se ejcuta una sentencia mientras la condicion sea verdadera
 
-    //Iterando un Array
+    while (condicion)
+    sentencia
 
-    let iterable= [10, 20, 30];
+    //condicion que se evalua antes de cada paso del bucle si esta se ejecuta verdadera pasa ala s siguiente
+    //sentencia se ejecuta mientras la condicion se evalua como verdadera
 
-    for (let value of iterable) { // en vez de let utlizar const si no se va a modificar la variable 
-      value += 1;
-      console.log(value);
+    n = 0;
+    x = 0;
+    while (n < 3) {
+      n ++;   //al ser verdadera se ejcuta esto
+      x += n;
     }
-    
-    //Iterando un String
-
-    let iterable1 = "boo";
-
-    for (let value of iterable) {
-    console.log(value);
-    }
-
-    //Iterando un TypedArray
-    let iterable2 = new Uint8Array([0x00, 0xff]);
-
-    for (let value of iterable) {
-     console.log(value);
-    }
-
-    //Iterando un Set
-
-    let iterable3 = new Set([1, 1, 2, 2, 3, 3]);
-
-    for (let value of iterable) {
-     console.log(value);
-    }
-
-    //Iterando un objeto
-
-    (function() {
-        for (let argument of arguments) {
-          console.log(argument);
-        }
-      })(1, 2, 3);
-
-    //Hay muchos mas ejemplos sobre defernetes tipos esos son los mas principales
-
-    //la diferencia sobre for..in itera sobre cualquier propiedad de un onjeto
-    //for..of es especifica para colecciones y no para los onjetos 
-
 
 })
