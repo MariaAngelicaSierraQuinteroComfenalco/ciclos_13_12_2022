@@ -1,19 +1,31 @@
 addEventListener(`DOMContentLoaded`, (e)=>{
 
-    // FOR
-    // es un bucle que consiste en tres expresiones dentro de parentesis y separadas
-    //for ([expresion-inicial]; [condicion]; [expresion-final])sentencia
-    // esa seria el ejmplo con el cual podemos crear un for
-    //En la exprecion inicial esta se utliza como una variable contador, al final el resultado es descartado
-    // La condicion evaluada para saber si se ejecuta o no 
-    //En la expresion final se usa para incrementar o cambiar el numero del contador 
-    //la sentencia se ejecuta mientras la condicion evaluada sea verdadera
-    //ejemplo:
+    // FOR...IN
+    //la instrucion se repite sobre todas las propiedades de un objeto que este codificado por cadena
+    //for (variable in objeto) instrucción
+    
+    for (variable in objeto){
+    instrucción }
+    //la variable es la asignacion de un nombre a la propiedad diferntes a la variable
+    // el objeto cuyas propiedas enumerables no son simbolos 
 
-    for (var i = 0; i < 10; i++) {//se inicializa la variable con var
-        n += i;
-        mifuncion(n);
-      }
+
+    // Imprimir las propiedades de un objeto en la consola
+    var obj = {a: 1, b: 2, c: 3};
+
+    for (const prop in obj) {
+      console.log(`obj.${prop} = ${obj[prop]}`);
+    }
+ 
+    // Modificar las propiedades de un objeto
+    var obj = {a: 1, b: 2, c: 3};
+    for (const variable in obj) {
+    obj[variable] = obj[variable] * 2;
+    }
+    console.log(obj); 
+   //En general, es mejor no agregar, modificar o eliminar propiedades del objeto durante la iteración, 
+   //aparte de la propiedad que se está visitando actualmente. No hay garantía de si se visitará una propiedad agregada
+
 
 
 })
