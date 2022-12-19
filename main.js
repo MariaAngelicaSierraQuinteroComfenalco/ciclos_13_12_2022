@@ -1,31 +1,59 @@
 addEventListener(`DOMContentLoaded`, (e)=>{
 
-    // FOR...IN
-    //la instrucion se repite sobre todas las propiedades de un objeto que este codificado por cadena
-    //for (variable in objeto) instrucción
-    
-    for (variable in objeto){
-    instrucción }
-    //la variable es la asignacion de un nombre a la propiedad diferntes a la variable
-    // el objeto cuyas propiedas enumerables no son simbolos 
-
-
-    // Imprimir las propiedades de un objeto en la consola
-    var obj = {a: 1, b: 2, c: 3};
-
-    for (const prop in obj) {
-      console.log(`obj.${prop} = ${obj[prop]}`);
-    }
+   //FOR...OF
+    // ejecuta un bloque de codigo para cada elemento de un objeto iterable
  
-    // Modificar las propiedades de un objeto
-    var obj = {a: 1, b: 2, c: 3};
-    for (const variable in obj) {
-    obj[variable] = obj[variable] * 2;
-    }
-    console.log(obj); 
-   //En general, es mejor no agregar, modificar o eliminar propiedades del objeto durante la iteración, 
-   //aparte de la propiedad que se está visitando actualmente. No hay garantía de si se visitará una propiedad agregada
+    for (variable of iterable) {
+        statement
+      }
+    //variable corresponde al valor asignado
+    //iterable objeto cuyas propiedades enumerables son repetidas
+    //ejemplos
 
+    //Iterando un Array
+
+    let iterable= [10, 20, 30];
+
+    for (let value of iterable) { // en vez de let utlizar const si no se va a modificar la variable 
+      value += 1;
+      console.log(value);
+    }
+    
+    //Iterando un String
+
+    let iterable1 = "boo";
+
+    for (let value of iterable) {
+    console.log(value);
+    }
+
+    //Iterando un TypedArray
+    let iterable2 = new Uint8Array([0x00, 0xff]);
+
+    for (let value of iterable) {
+     console.log(value);
+    }
+
+    //Iterando un Set
+
+    let iterable3 = new Set([1, 1, 2, 2, 3, 3]);
+
+    for (let value of iterable) {
+     console.log(value);
+    }
+
+    //Iterando un objeto
+
+    (function() {
+        for (let argument of arguments) {
+          console.log(argument);
+        }
+      })(1, 2, 3);
+
+    //Hay muchos mas ejemplos sobre defernetes tipos esos son los mas principales
+
+    //la diferencia sobre for..in itera sobre cualquier propiedad de un onjeto
+    //for..of es especifica para colecciones y no para los onjetos 
 
 
 })
