@@ -1,19 +1,22 @@
 addEventListener(`DOMContentLoaded`, (e)=>{
+    document.querySelector("body").innerHTML = " Abrir consola con f12"
+    
+    //forEach
+   //El metodo forEach() llama a una  función callback específica una vez por cada elemento 
+   //sobre el que itera dentro de un arreglo
+    let numeros = [3, 6, 8, 10, 12]
+    let impar = 3;
+    
+    //El método forEach no regresa un nuevo arreglo al igual que lo hacen otros iteradores tal como
+    //map . En cambio, el método devuelve el valor  undefined por sí solo. Por lo tanto
+    // no se puede encadenar como los otros métodos
 
-   //DO..WHILE
-    // es un bucle donde se ejecuta una sentencia especifica hasta que la condicion que se comprueba sea falsa
+    numeros.forEach(function(numero) {
+        if (numero === impar) {
+            numeros.shift() 
+        }
+    })
 
-    do
-        sentencia
-    while (condición);
-
-    //una sentencia que se ejecuta al menos una ves y es reejcuatada cadavez que la condicion sea verdadera
-    //condicion se evalua despues de cada paso por el bucle si la condicion es verdadera se reejecuta 
-
-    //ejemplos 
-    do {
-        i += 1;
-        document.write(i);
-     } while (i < 5);
+    console.log(numeros);
 
 })
